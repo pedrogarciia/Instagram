@@ -1,0 +1,157 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+a{
+    text-decoration:none;
+    color: #3c96ed;
+}
+
+body{
+    background: #FAFAFA;
+    height: 100%;
+    width: 100%;
+    margin:0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+#wrapper{
+    height: 100vh;
+}
+
+#container{
+    margin: 0 auto;
+    min-height: 100%;
+    width: 800px;
+    display: flex;
+    align-items: center;
+}
+
+.column{
+    flex-grow: 1;
+    width: 50%;
+}
+
+.left{
+    background-image: url("assets/Imagem\ login\ insta.png");
+    background-size: 450px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
+    margin-bottom: 50px;
+}
+
+.right{
+    padding-left: 20px;
+}
+
+.login-panel{
+    text-align:start;
+    padding: 20px 0;
+}
+
+.log{
+    padding-bottom: 10px;
+}
+
+.log h1{
+    font-size: medium;
+}
+
+form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+input[type="password"], input[type="text"]{
+    border: 1px solid rgb(236, 234, 234);
+    height: 60px;
+    border-radius: 20px;
+    margin-top: 10px;
+    padding: 20px;
+    font-size: 15px;
+    width: 320px;
+}
+
+input[type="password"]::placeholder, input[type="text"]::placeholder{
+    color: #666a72;
+}
+
+input[type="password"]:focus, input[type="text"]:focus{
+    outline: 0;
+    border: 1px solid #757575;
+}
+
+input[type="password"]:hover, input[type="text"]:hover{
+    border: 1px solid rgba(0, 0, 0, 0.329);
+}
+
+
+
+.login{
+    width: 320px;
+    margin-top: 20px;
+    height: 40px;
+    border:0;
+    background-color: #0064e0;
+    border-radius: 30px;
+    color: #FFF;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.login:hover{
+    background-color: #0065e0d0;
+}
+
+.forgot{
+    width: 320px;
+    margin-top: 10px;
+    height: 40px;
+    border:0;
+    background-color: #fafafaf8;
+    border-radius: 30px;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.forgot:hover{
+    background-color: hsl(0, 0%, 91%);
+}
+
+.create{
+    width: 320px;
+    margin-top: 70px;
+    height: 40px;
+    border:1px solid #0064e0 ;
+    background-color: #FAFAFA;
+    color: #0064e0;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.create:hover{
+    background-color: hsl(0, 0%, 91%);
+}
+
+.meta-logo{
+    display: flex;
+    justify-content: center;
+    padding-right: 60px;
+}
+
+.meta-logo img{
+    height: 34px;
+}
+
