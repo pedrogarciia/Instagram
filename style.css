@@ -35,7 +35,7 @@ body{
 
 .column{
     flex-grow: 1;
-    width: 50%;
+    width: 100%;
 }
 
 .left{
@@ -45,6 +45,7 @@ body{
     background-position: center;
     height: 600px;
     margin-bottom: 50px;
+    border-right: 2px solid #BEC3C9;
 }
 
 .right{
@@ -155,3 +156,27 @@ input[type="password"]:hover, input[type="text"]:hover{
     height: 34px;
 }
 
+footer{
+    text-align: center;
+    height: 50px;
+    margin-top: -50px;
+    border-top: 2px solid #BEC3C9 ;
+}
+
+footer a{
+    color:#92969b;
+    margin-right: 13px;
+    font-size: smaller;
+    border-top:#92969b ;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+.text-small{
+    font-size: smaller;
+    color:#92969b;
+    padding-top: 10px;
+    display: inline-block;
+}
