@@ -26,11 +26,11 @@ body{
 }
 
 #container{
-    margin: 0 auto;
+    margin: 0;             
     min-height: 100%;
-    width: 800px;
+    width: 100%;             
     display: flex;
-    align-items: center;
+    align-items: stretch;    
 }
 
 .column{
@@ -43,13 +43,27 @@ body{
     background-size: 450px;
     background-repeat: no-repeat;
     background-position: center;
-    height: 600px;
-    margin-bottom: 50px;
     border-right: 2px solid #BEC3C9;
+    position: relative;
+}
+
+.hero-text{
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 480px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    color: #262626;
 }
 
 .right{
     padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .login-panel{
@@ -159,8 +173,8 @@ input[type="password"]:hover, input[type="text"]:hover{
 footer{
     text-align: center;
     height: 50px;
-    margin-top: -50px;
-    border-top: 2px solid #BEC3C9 ;
+    margin-top: -50px;    
+    border-top: 2px solid #BEC3C9;
 }
 
 footer a{
