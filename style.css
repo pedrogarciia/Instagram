@@ -23,19 +23,26 @@ body{
 
 #wrapper{
     height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 #container{
     margin: 0 auto;
-    min-height: 100%;
-    width: 800px;
+    width: 100%;
+    flex: 1; /* ocupa todo espaço disponível, exceto o footer */
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 
 .column{
     flex-grow: 1;
-    width: 100%;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .left{
@@ -43,18 +50,22 @@ body{
     background-size: 450px;
     background-repeat: no-repeat;
     background-position: center;
-    height: 600px;
-    margin-bottom: 50px;
+    height: 100%;
+    margin-bottom: 0;
     border-right: 2px solid #BEC3C9;
 }
 
 .right{
-    padding-left: 20px;
+    padding-left: 0;
+    flex-direction: column;
+    align-items: center;
 }
 
 .login-panel{
     text-align:start;
     padding: 20px 0;
+    width: 100%;
+    max-width: 420px;
 }
 
 .log{
@@ -62,7 +73,9 @@ body{
 }
 
 .log h1{
-    font-size: medium;
+    font-size: 28px; /* estava "medium" (~14px), muito pequeno pro espaço */
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 
 form{
@@ -73,12 +86,12 @@ form{
 
 input[type="password"], input[type="text"]{
     border: 1px solid rgb(236, 234, 234);
-    height: 60px;
+    height: 70px;
     border-radius: 20px;
-    margin-top: 10px;
-    padding: 20px;
-    font-size: 15px;
-    width: 320px;
+    margin-top: 12px;
+    padding: 24px;
+    font-size: 17px;
+    width: 100%;
 }
 
 input[type="password"]::placeholder, input[type="text"]::placeholder{
@@ -97,14 +110,14 @@ input[type="password"]:hover, input[type="text"]:hover{
 
 
 .login{
-    width: 320px;
+    width: 100%;
     margin-top: 20px;
-    height: 40px;
+    height: 48px;
     border:0;
     background-color: #0064e0;
     border-radius: 30px;
     color: #FFF;
-    font-size: 14px;
+    font-size: 16px;
     cursor: pointer;
 }
 
@@ -113,14 +126,14 @@ input[type="password"]:hover, input[type="text"]:hover{
 }
 
 .forgot{
-    width: 320px;
+    width: 100%;
     margin-top: 10px;
-    height: 40px;
+    height: 48px;
     border:0;
     background-color: #fafafaf8;
     border-radius: 30px;
     color: black;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
     cursor: pointer;
 }
@@ -130,14 +143,14 @@ input[type="password"]:hover, input[type="text"]:hover{
 }
 
 .create{
-    width: 320px;
+    width: 100%;
     margin-top: 70px;
-    height: 40px;
+    height: 48px;
     border:1px solid #0064e0 ;
     background-color: #FAFAFA;
     color: #0064e0;
     border-radius: 30px;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
     cursor: pointer;
 }
@@ -149,18 +162,20 @@ input[type="password"]:hover, input[type="text"]:hover{
 .meta-logo{
     display: flex;
     justify-content: center;
-    padding-right: 60px;
+    padding-right: 20px;
 }
 
 .meta-logo img{
-    height: 34px;
+    height: 40px;
 }
 
 footer{
     text-align: center;
     height: 50px;
-    margin-top: -50px;
-    border-top: 2px solid #BEC3C9 ;
+    margin-top: 0;
+    border-top: 2px solid #BEC3C9;
+    flex-shrink: 0; 
+    padding-top: 15px;
 }
 
 footer a{
@@ -176,7 +191,9 @@ footer a:hover{
 
 .text-small{
     font-size: smaller;
-    color:#92969b;
+    color: #92969b;
     padding-top: 10px;
-    display: inline-block;
+    width: 100%; /* ocupa a linha inteira, forçando quebra */
+    display: block; /* era inline-block, mas com width:100% fica igual a block */
+    text-align: center;
 }
